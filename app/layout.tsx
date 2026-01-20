@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png",
   },
+
   themeColor: "#0b0f1a",
 };
 
@@ -51,4 +52,7 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+
 
