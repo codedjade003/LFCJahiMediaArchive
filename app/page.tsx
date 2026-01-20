@@ -24,10 +24,10 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                LFC Jahi Media Archive
+                Living Faith Church Jahi Media Archive
               </h1>
               <p className="text-gray-400 text-sm mt-1">
-                Living Faith Church Jahi • Exclusive content access
+                Secure access to Living Faith Church Jahi media
               </p>
             </div>
           </div>
@@ -46,12 +46,12 @@ export default function Home() {
           
           {/* Title */}
           <h2 className="text-3xl font-bold mb-4">
-            Access Your Media
+            Redeem Your Media Access
           </h2>
           
           {/* Description */}
           <p className="text-gray-400 mb-10 max-w-sm mx-auto">
-            Enter your coupon code to unlock exclusive images, videos, and audio content.
+            Enter your coupon code to unlock official Living Faith Church Jahi images, videos, and audio resources.
           </p>
           
           {/* Redeem button */}
@@ -66,7 +66,7 @@ export default function Home() {
           {/* Optional: Small instructions */}
           <div className="mt-12 pt-8 border-t border-white/10">
             <p className="text-sm text-gray-500">
-              Need a coupon? Contact support for access.
+              Need a coupon? Contact the church media team for access.
             </p>
           </div>
         </div>
@@ -75,9 +75,13 @@ export default function Home() {
       {/* Simple footer */}
       <footer className="border-t border-white/10 py-6 mt-12">
         <div className="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
-          <p>© {new Date().getFullYear()} LFC Jahi Media Archive • All rights reserved</p>
+          <p>(c) {new Date().getFullYear()} Living Faith Church Jahi Media Archive. All rights reserved</p>
         </div>
       </footer>
     </div>
   );
 }
+
+
+
+

@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { b2 } from "@/lib/b2";
 import { createClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
+import jwt from "jsonwebtoken";
 
 // Supabase service role client
 const supabase = createClient(
@@ -14,9 +15,18 @@ export async function DELETE(req: Request) {
   try {
     // Check admin authentication
     const cookieStore = await cookies();
-    const adminSession = cookieStore.get("admin-session");
-    
-    if (!adminSession?.value) {
+    const token = cookieStore.get("admin_token")?.value;
+
+    if (!token) {
+      return NextResponse.json(
+        { error: "Unauthorized" },
+        { status: 401 }
+      );
+    }
+
+    try {
+      jwt.verify(token, process.env.ADMIN_JWT_SECRET!);
+    } catch {
       return NextResponse.json(
         { error: "Unauthorized" },
         { status: 401 }
@@ -149,3 +159,5 @@ export async function DELETE(req: Request) {
     );
   }
 }
+
+
